@@ -1,0 +1,27 @@
+---
+description: このワークスペースでは変更後に確認なしで commit & push してよい
+alwaysApply: true
+---
+
+# Git 運用（自動 commit & push）
+
+このワークスペースでは、作業内容を反映したら **ユーザーの確認を待たずに commit & push してよい**。
+
+## 方針
+
+- Markdown やアイデア文書の追加・更新後は、そのまま commit & push する
+- コミット前に「commit しますか？」と聞かない
+- コミットメッセージは変更内容がわかる短い日本語（例: `docs: Git運用とPWA手順を追記`）
+
+## 手順
+
+```powershell
+git add .
+git commit -m "メッセージ"
+git push
+```
+
+## 注意
+
+- 認証情報（`.env` など）は commit しない
+- 実装ファイル（HTML/CSS/JS など）はこのワークスペースに置かない
